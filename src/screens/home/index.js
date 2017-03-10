@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {hashHistory} from 'react-router'
 import {MessageActions, UserActions} from '../../store'
+import moment from 'moment'
 
 const {sendMessage, listen} = MessageActions
 const {getUser} = UserActions
@@ -38,7 +39,7 @@ class HomeScreen extends Component {
             return {
             "div":<li className='msg_msg ' key={msg.id}>
               {msg.data.value} <span>
-              ({((parseInt(msg.createdAt.substr(11,2),10) + 17) % 24).toString()}{msg.createdAt.substr(13 ,3)})
+              ({moment(msg.createdAt).calendar()/*That is SO much sexier!*/})
               </span>
             </li>,
             "msg":msg
