@@ -37,7 +37,9 @@ class HomeScreen extends Component {
           if (msg.type === 'text') {
             return {
             "div":<li className='msg_msg ' key={msg.id}>
-              {msg.data.value} <span>({msg.createdAt.substr(11,5)})</span>
+              {msg.data.value} <span>
+              ({((parseInt(msg.createdAt.substr(11,2),10) + 17) % 24).toString()}{msg.createdAt.substr(13 ,3)})
+              </span>
             </li>,
             "msg":msg
           }}
