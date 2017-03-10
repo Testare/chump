@@ -22,21 +22,22 @@ function RegisterScreen({user}){
   }
 
   return (
-    <form onSubmit={submit}>
+    <form className = "w3-container w3-blue w3-display-topmiddle" onSubmit={submit}>
+      <h1 className = "w3-container w3-black">Chump</h1>
       <fieldset>
-        <legend>Login:</legend>
+        <legend>Register</legend>
         <div>
-          <label>Username: <input required type="text" ref={el=>usernameInput = el}/></label>
+          <label>Username: <input required className = "w3-input" type="text" ref={el=>usernameInput = el}/></label>
         </div>
         <div>
-          <label>Password: <input required type="password" ref={el=>passwordInput = el}/></label>
+          <label>Password: <input className = "w3-input" required type="password" ref={el=>passwordInput = el}/></label>
         </div>
         <div>
-          <label>Email: <input required type="email" ref={el=>emailInput = el}/></label>
+          <label>Email: <input className = "w3-input" required type="email" ref={el=>emailInput = el}/></label>
         </div>
         <div>
-          <Link to="/login">Login</Link>
-          <button>Register</button>
+          <button className = "w3-btn w3-black w3-margin" >Register</button>
+          <Link className = "w3-btn w3-white w3-margin" to="/login">(Have an account? Login here)</Link>
         </div>
       </fieldset>
     </form>

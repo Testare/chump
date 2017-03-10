@@ -1,5 +1,5 @@
 import './index.css'
-
+import './w3.css'
 import 'babel-polyfill'
 
 import React from 'react'

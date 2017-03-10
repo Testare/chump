@@ -3,3 +3,47 @@ body {
   padding: 40px;
   font-family: sans-serif;
 }
+
+.title {
+  color:blue;
+}
+form {
+  width:500px;
+  max-width:500px;
+}
+div.msg {
+  color:blue;
+  max-width:500px;
+}
+
+.user_tag {
+  font-weight: bold;
+  text-decoration: underline;
+}
+div.msg_usr {
+  font-weight: bold;
+}
+
+li.msg_msg {
+  font-style: italic;
+}
+
+
+li.msg_msg span {
+    /*visibility: hidden;*/
+    /*width: 120px;*/
+    /*background-color: #555;*/
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.msg_msg:hover span {
+    visibility: visible;
+    opacity: 0.3;
+}
